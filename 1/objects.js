@@ -34,9 +34,14 @@ console.log(true > 0);
 
 // Exercise 4 - Remove a property 
 
-const thisSong = {description: "The best song in the world."}
+const thisSong = {description: "The best song in the world.", object: "I am not entirely empty"}
 
 // remove the property "description" and add a property called "about" that should say "Just a tribute." 
 
-const tribute = {about: "Just a tribute"};
-console.log(tribute.about);
+delete thisSong.description;
+console.log(thisSong);
+
+
+
+thisSong.about = "Just a tribute";
+console.log(thisSong.about);

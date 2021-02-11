@@ -12,7 +12,7 @@ console.log(getKetByValue(myObj));
 
 // Log the message 
 
-console.log(myObj);
+console.log(myObj.message);
 
 // Exercise 2 - Defining an object. 
 
@@ -20,7 +20,7 @@ console.log(myObj);
 
 const me = {message: "Chris Nymark"};
 
-console.log(me);
+console.log(me.message);
 
 // Exercise 3 - Add a property 
 
@@ -39,4 +39,4 @@ const thisSong = {description: "The best song in the world."}
 // remove the property "description" and add a property called "about" that should say "Just a tribute." 
 
 const tribute = {about: "Just a tribute"};
-console.log(tribute);
+console.log(tribute.about);

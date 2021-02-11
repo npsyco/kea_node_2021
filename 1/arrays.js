@@ -17,16 +17,22 @@ console.log(friends);
 
 // What a lonely array. Add at least 3 friend objects to it.  
 
-friends.push('adam');
-console.log(friends);
+const jamie = {
+    name: "jamie",
+    age: 20
+};
 
-friends.push('joe');
-console.log(friends);
+const doll = {
+    name: "doll",
+    age: 99
+};
 
-friends.push('me');
-console.log(friends);
+const bob = {
+    name: "bob",
+    age: 1000
+};
 
-friends.push('you', 'them', 'even more ppl');
+friends.push(jamie, doll, bob);
 console.log(friends);
 
 // --------------------------------------

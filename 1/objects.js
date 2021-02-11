@@ -28,9 +28,9 @@ const stackOverflow = {};
 
 // make a rule called isAllowed and let the value be true
 
-const isAllowed = true;
+stackOverflow.isAllowed = true;
 
-console.log(isAllowed);
+console.log(true > 0);
 
 // Exercise 4 - Remove a property 
 

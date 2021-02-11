@@ -75,7 +75,7 @@ console.log(diet);
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
 
 var dinnerTrayWrong = [diet]; // this does not copy the original array, but refs it
-var dinnerTray = [...diet];
+var dinnerTray = [...diet]; // alternative: var dinnerTray = diet.slice();
 console.log(dinnerTray);
 
 // --------------------------------------
@@ -85,7 +85,7 @@ const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];
 console.log(lettersExpanded);
 // log every second char in the array starting from b
 
-var i;
+let i;
 for(i = 0; i < lettersExpanded.length; i++) {
     if (i % 2 != 0)
     {console.log(lettersExpanded[i])}

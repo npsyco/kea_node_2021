@@ -19,3 +19,41 @@ app.get("/anotherpath", (req, res) => {
 })
 
 app.listen(9010);
+
+/* alternative solution
+array of students:
+
+const student = [
+{
+    id: 1,
+    name: "Chris",
+    age: 34
+},
+{
+        id: 2,
+    name: "Peter",
+    age: 99
+}
+{
+        id: 3,
+    name: "Fender",
+    age: 2993
+}
+];
+
+// returns all
+
+app.get("/students", (req, res) => {
+    res.send({ students });
+});
+
+returns by Id
+
+app.get("/students/:id", (req, res) => {
+    const pathId = req.params.id;
+    const students = students.find(students => student.id == pathId);
+    res.send({ student });
+});
+
+
+*/

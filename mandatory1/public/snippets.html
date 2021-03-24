@@ -9,6 +9,7 @@
     
 </head>
 <body>
+
     <div class="topnav">
         <span class="span-txt-cap">
             <a class="active" href="home">Home</a>
@@ -18,35 +19,54 @@
             <a href="commands">Commands</a>
         </span>
     </div>
+
     <h1>Snippets</h1>
+
     <div class="container">
-        <img src="./snip1.PNG" alt="Basic get and redirect" class="image" width="50%" style="vertical-align: middle;margin: 0px 50%;">
+        <img src="./snip1.PNG" alt="Basic get and redirect" class="image" width="50%" style="vertical-align: middle; margin: 0px 50%;">
         <div class="middle">
-            <div class="text">Hover Effect</div>
+            <div class="text">Basic server setup</div>
         </div>
     </div>
-    <table class="table-center">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>ID</th>
-                <th>Ranking</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>ID</th>
-                <th>Ranking</th>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td>Test</td>
-                <td>001</td>
-                <td>random</td>
-            </tr>
-        </tbody>
-    </table>
+
+    <ul>
+        <li>Here we see the fundamental setup of a node server:
+            we need to instruct node to utilize express, our web
+            framework for node.js
+        </li>
+        <li>
+            The <mark>app.use</mark>(express.static('public')) instructs node to include a folder called public (named so by convention). This
+            will then enable us to keep our html-files (and other static files such as css-files or images) in a specific folder (or subfolder).
+        </li>
+        <li>
+            The <mark>app.get</mark> serves the pages, where the <mark>"/"</mark> is the endpoint and the (req, res)
+            is the parameters for request and response.
+            This is followed by <mark>res.redirect</mark> on line 9, so user always defaults to home.
+        </li>
+        <li>
+            The <mark>response.sendFile</mark> is where an actual html file is served. 
+        </li>
+    </ul>
+    <br>
+    <div class="container">
+        <img src="./snip2.PNG" alt="Basic get and redirect" class="image" width="50%" style="vertical-align: middle; margin: 0px 50%;">
+        <div class="middle">
+            <div class="text">Server port</div>
+        </div>
+    </div>
+    <br>
+    <ul>
+        <li>
+            On line 43, we see that the port is set to the port that is = process.env.PORT. This is set in the project files (package.json). However, if this does not exists, the app will launch on port 8000.
+            Then the <mark>app.listen</mark> is what instruct our server to utilize a specific port. In this case we supplied it with the parameter of port, instead of an actual number.
+            If there are no errors, we will have a console print with the port specified in the .json file.
+        </li>
+    </ul>
+    <br>
+<!--     <script>
+        setTimeout(() => {
+            window.location.href = "commands";
+        }, 10000);
+    </script> -->
 </body>
 </html>
